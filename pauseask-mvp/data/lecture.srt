@@ -1,0 +1,55 @@
+1
+00:00:00,000 --> 00:00:15,000
+Welcome. Today we talk about how a machine learning model learns from data and why it sometimes fails on new data.
+
+2
+00:00:15,000 --> 00:00:30,000
+A model is a function that maps inputs to outputs. We fit it by adjusting its parameters to reduce the error on training data.
+
+3
+00:00:30,000 --> 00:00:45,000
+Training data is what the model sees while learning. Test data is held back and used only to measure how well it generalizes.
+
+4
+00:00:45,000 --> 00:01:00,000
+Generalization means performing well on examples the model has never seen. That is the real goal, not memorizing the training set.
+
+5
+00:01:00,000 --> 00:01:15,000
+Overfitting happens when a model learns noise and tiny details of the training data. Training error is very low but test error is high.
+
+6
+00:01:15,000 --> 00:01:30,000
+A typical sign of overfitting is a big gap between training accuracy and test accuracy. Very complex models are most at risk.
+
+7
+00:01:30,000 --> 00:01:45,000
+Underfitting is the opposite: the model is too simple to capture the pattern, so both training and test error are high.
+
+8
+00:01:45,000 --> 00:02:00,000
+One way to fight overfitting is to get more training data, because it is harder to memorize a larger and more varied set.
+
+9
+00:02:00,000 --> 00:02:15,000
+Another way is regularization, which adds a penalty for large parameter values so the model stays simpler.
+
+10
+00:02:15,000 --> 00:02:30,000
+L2 regularization, also called ridge, penalizes the sum of squared weights. It shrinks weights toward zero but rarely makes them exactly zero.
+
+11
+00:02:30,000 --> 00:02:45,000
+L1 regularization, also called lasso, penalizes the absolute value of weights. It can set some weights exactly to zero and so selects features.
+
+12
+00:02:45,000 --> 00:03:00,000
+Cross-validation splits the training data into folds. We train on some folds and validate on the rest, then average the results.
+
+13
+00:03:00,000 --> 00:03:15,000
+Cross-validation gives a more reliable estimate of performance and helps us choose settings like the regularization strength.
+
+14
+00:03:15,000 --> 00:03:30,000
+To summarize: aim for generalization, watch the gap between training and test error, and use regularization and cross-validation.
