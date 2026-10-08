@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("pauseask")
-MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")  # check the current model name in Google AI Studio
+MODEL = os.getenv("GEMINI_MODEL", "google/gemini-2.5-flash-lite:batch")  # check the current model name in Google AI Studio
 MAX_DIST = float(os.getenv("MAX_DISTANCE", "0.7"))     # lower = stricter; tune with your test questions
 TOP_K = int(os.getenv("TOP_K", "5"))
 NOT_FOUND = "I couldn't find this in the content you have reached so far."
